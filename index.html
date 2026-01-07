@@ -102,54 +102,74 @@
     </div>
   </section>
 
-  <section class="bg-white py-10 px-6 md:px-16">
-  <!-- About Us Section -->
-  <div class="max-w-15xl mx-auto" style="display: flex; margin: 100px;">
-    <div class="div" style="width: 150px;"><p class="text-green-800 font-semibold text-sm tracking-wide mb-3">ABOUT US</p></div>
-    <div class="div" style="margin-left: 10%;"><h2 class="text-4xl md:text-5xl font-serif text-green-900 leading-tight mb-8">
-      See why we are uniquely equipped to support global businesses in a fast-changing world.
-    </h2>
-    <a href="#"
-       class="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors duration-300">
-      READ MORE
-      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-           xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-      </svg>
-    </a></div>
-    
+  <section class="bg-white py-16 px-6 md:px-16">
+
+  <!-- ABOUT US -->
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 mb-24">
+
+    <!-- LABEL -->
+    <div class="md:w-[150px]">
+      <p class="text-green-800 font-semibold text-sm tracking-wide">
+        ABOUT US
+      </p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="flex-1">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-green-900 leading-tight mb-8 max-w-4xl">
+        See why we are uniquely equipped to support global businesses in a fast-changing world.
+      </h2>
+
+      <a
+        href="#"
+        class="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors duration-300"
+      >
+        READ MORE
+        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
   </div>
 
-  <!-- News & Insights Section -->
-  <div class="max-w-8xl mx-auto mt-32 flex flex-col md:flex-row md:justify-between items-start md:items-center">
-    <h2 class="text-4xl md:text-5xl font-serif text-green-900 leading-tight mb-6 md:mb-0">
-      Spotlight on our news<br> and insights
+  <!-- NEWS & INSIGHTS -->
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif text-green-900 leading-tight max-w-3xl">
+      Spotlight on our news<br class="hidden sm:block" />
+      and insights
     </h2>
-    <a href="#"
-       class="text-green-600 font-semibold hover:text-green-700 inline-flex items-center transition-colors duration-300" style="margin-right: 35%">
+
+    <a
+      href="#"
+      class="inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors duration-300"
+    >
       VIEW ALL NEWS AND INSIGHTS
-      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-           xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+      <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
       </svg>
     </a>
+
   </div>
+
 </section>
 
-<section class="bg-white py-24 px-6 md:px-16">
-  <div class="max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16" style="display: flex;">
+<section class="bg-white py-16 md:py-24 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
 
     <!-- LEFT BIG CARD -->
-    <div class="lg:col-span-2" style="width: 50%;">
+    <div>
       <img
         src="https://www.aoshearman.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fallenoveryllp1-aoshearmanwe0db-production-ecf3%2Fmedia%2Fproject%2Faoshearman%2Faoshearman%2Fblogs%2Fimages%2Fon-data%2Fwoman-looking-at-screen-with-ai-on-it-gettyimages-2173773457.jpg%3Fh%3D1063%26iar%3D0%26w%3D1600&w=3840&q=90"
         alt=""
-        class="w-full h-[420px] object-cover mb-8"
+        class="w-full h-[260px] sm:h-[340px] md:h-[420px] object-cover mb-8"
       />
 
       <p class="text-sm text-green-700 mb-2">Artificial intelligence</p>
 
-      <h3 class="text-3xl md:text-4xl font-serif text-green-900 leading-tight mb-10">
+      <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif text-green-900 leading-tight mb-10">
         A&O Shearman advises Global AI on strategic partnership with HUMAIN
       </h3>
 
@@ -163,59 +183,62 @@
     </div>
 
     <!-- RIGHT COLUMN -->
-    <div class="space-y-20" style="width: 50%;">
+    <div class="space-y-16">
 
       <!-- CARD 1 -->
-      <div style="display: flex;">
-        <div class="div"><img
+      <div class="flex flex-col sm:flex-row gap-6">
+        <img
           src="https://www.aoshearman.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fallenoveryllp1-aoshearmanwe0db-production-ecf3%2Fmedia%2Fproject%2Faoshearman%2Faoshearman%2Fnews%2F2025%2F11%2Flow-angle-view-of-electricity-pylon-gettyimages-1384322774.jpg%3Fh%3D1063%26iar%3D0%26w%3D1600&w=3840&q=90"
           alt=""
-          class="w-full h-[220px] object-cover mb-6"
+          class="w-full sm:w-[220px] h-[200px] object-cover"
         />
-</div>
-        <div class="div" style="margin-left: 5%;">        <p class="text-sm text-green-700 mb-2">Corporate and M&amp;A</p>
 
-        <h4 class="text-2xl font-serif text-green-900 leading-snug mb-8">
-          A&O Shearman advises La Caisse on strategic investment in Pike Corporation
-        </h4>
+        <div class="flex-1">
+          <p class="text-sm text-green-700 mb-2">Corporate and M&amp;A</p>
 
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="w-[3px] h-6 bg-blue-600"></span>
-            <span class="text-sm font-semibold tracking-wide">CLIENT NEWS</span>
+          <h4 class="text-xl md:text-2xl font-serif text-green-900 leading-snug mb-8">
+            A&O Shearman advises La Caisse on strategic investment in Pike Corporation
+          </h4>
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="w-[3px] h-6 bg-blue-600"></span>
+              <span class="text-sm font-semibold tracking-wide">CLIENT NEWS</span>
+            </div>
+            <span class="text-sm text-green-800">17 Nov 2025</span>
           </div>
-          <span class="text-sm text-green-800">17 Nov 2025</span>
-        </div></div>
-
+        </div>
       </div>
 
       <!-- CARD 2 -->
-      <div style="display: flex;">
-        <div class="div"><img
+      <div class="flex flex-col sm:flex-row gap-6">
+        <img
           src="https://www.aoshearman.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fallenoveryllp1-aoshearmanwe0db-production-ecf3%2Fmedia%2Fproject%2Faoshearman%2Faoshearman%2Finsights%2Fpublications%2F2025%2F10%2Flight-swirl-trail-br39756ldncwwaogi1547875748rgb.jpg%3Fh%3D1063%26iar%3D0%26w%3D1600&w=3840&q=90"
           alt=""
-          class="w-full h-[220px] object-cover mb-6"
+          class="w-full sm:w-[220px] h-[200px] object-cover"
         />
-</div>
-        <div class="div" style="margin-left: 5%;">        <p class="text-sm text-green-700 mb-2">Corporate and M&amp;A</p>
 
-        <h4 class="text-2xl font-serif text-green-900 leading-snug mb-8">
-          A&O Shearman advises La Caisse on strategic investment in Pike Corporation
-        </h4>
+        <div class="flex-1">
+          <p class="text-sm text-green-700 mb-2">Corporate and M&amp;A</p>
 
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <span class="w-[3px] h-6 bg-blue-600"></span>
-            <span class="text-sm font-semibold tracking-wide">CLIENT NEWS</span>
+          <h4 class="text-xl md:text-2xl font-serif text-green-900 leading-snug mb-8">
+            A&O Shearman advises La Caisse on strategic investment in Pike Corporation
+          </h4>
+
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="w-[3px] h-6 bg-blue-600"></span>
+              <span class="text-sm font-semibold tracking-wide">CLIENT NEWS</span>
+            </div>
+            <span class="text-sm text-green-800">17 Nov 2025</span>
           </div>
-          <span class="text-sm text-green-800">17 Nov 2025</span>
-        </div></div>
-
+        </div>
       </div>
 
     </div>
   </div>
 </section>
+
 
 <section class="bg-white py-24 px-6 md:px-16">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
@@ -368,68 +391,72 @@
     </div>
   </div>
 </section>
-<section class="flex justify-between bg-white px-[100px] py-[120px] font-serif">
-  
-  <!-- Left -->
-  <div class="w-[45%]">
-    <span class="text-[14px] font-semibold tracking-[1.5px] text-[#0b3d2e]">
-      GLOBAL COVERAGE
-    </span>
+<section class="bg-white font-serif px-6 md:px-[60px] lg:px-[100px] py-16 md:py-[120px]">
 
-    <h2 class="mt-[30px] text-[64px] leading-[1.1] font-normal text-[#0b3d2e]">
-      Where you are, we<br />
-      are
-    </h2>
+  <div class="flex flex-col lg:flex-row lg:justify-between gap-16">
+
+    <!-- LEFT -->
+    <div class="lg:w-[45%]">
+      <span class="text-[12px] md:text-[14px] font-semibold tracking-[1.5px] text-[#0b3d2e]">
+        GLOBAL COVERAGE
+      </span>
+
+      <h2 class="mt-6 md:mt-[30px] text-[36px] sm:text-[44px] md:text-[56px] lg:text-[64px] leading-[1.1] font-normal text-[#0b3d2e]">
+        Where you are,<br />
+        we are
+      </h2>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="lg:w-[40%] border-t-2 border-[#1db954] pt-8 md:pt-[40px]">
+      <ul class="space-y-4 md:space-y-[18px]">
+
+        <li class="flex items-center justify-between text-[18px] sm:text-[22px] md:text-[26px] lg:text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
+          <span>Global coverage</span>
+          <span class="text-[20px] md:text-[24px] lg:text-[26px]">→</span>
+        </li>
+
+        <li class="flex items-center justify-between text-[18px] sm:text-[22px] md:text-[26px] lg:text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
+          <span>North America</span>
+          <span class="text-[20px] md:text-[24px] lg:text-[26px]">→</span>
+        </li>
+
+        <li class="flex items-center justify-between text-[18px] sm:text-[22px] md:text-[26px] lg:text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
+          <span>Europe</span>
+          <span class="text-[20px] md:text-[24px] lg:text-[26px]">→</span>
+        </li>
+
+        <li class="flex items-center justify-between text-[18px] sm:text-[22px] md:text-[26px] lg:text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
+          <span>Asia Pacific</span>
+          <span class="text-[20px] md:text-[24px] lg:text-[26px]">→</span>
+        </li>
+
+        <li class="flex items-center justify-between text-[18px] sm:text-[22px] md:text-[26px] lg:text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
+          <span>Middle East</span>
+          <span class="text-[20px] md:text-[24px] lg:text-[26px]">→</span>
+        </li>
+
+        <li class="flex items-center justify-between text-[18px] sm:text-[22px] md:text-[26px] lg:text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
+          <span>Africa</span>
+          <span class="text-[20px] md:text-[24px] lg:text-[26px]">→</span>
+        </li>
+
+        <li class="flex items-center justify-between text-[18px] sm:text-[22px] md:text-[26px] lg:text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
+          <span>Latin America and the Caribbean</span>
+          <span class="text-[20px] md:text-[24px] lg:text-[26px]">→</span>
+        </li>
+
+        <li class="flex items-center justify-between text-[18px] sm:text-[22px] md:text-[26px] lg:text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
+          <span>Global Experts and Markets</span>
+          <span class="text-[20px] md:text-[24px] lg:text-[26px]">→</span>
+        </li>
+
+      </ul>
+    </div>
+
   </div>
-
-  <!-- Right -->
-  <div class="w-[40%] border-t-2 border-[#1db954] pt-[40px]">
-    <ul class="space-y-[18px]">
-      
-      <li class="flex items-center justify-between text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
-        <span>Global coverage</span>
-        <span class="text-[26px]">→</span>
-      </li>
-
-      <li class="flex items-center justify-between text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
-        <span>North America</span>
-        <span class="text-[26px]">→</span>
-      </li>
-
-      <li class="flex items-center justify-between text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
-        <span>Europe</span>
-        <span class="text-[26px]">→</span>
-      </li>
-
-      <li class="flex items-center justify-between text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
-        <span>Asia Pacific</span>
-        <span class="text-[26px]">→</span>
-      </li>
-
-      <li class="flex items-center justify-between text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
-        <span>Middle East</span>
-        <span class="text-[26px]">→</span>
-      </li>
-
-      <li class="flex items-center justify-between text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
-        <span>Africa</span>
-        <span class="text-[26px]">→</span>
-      </li>
-
-      <li class="flex items-center justify-between text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
-        <span>Latin America and the Caribbean</span>
-        <span class="text-[26px]">→</span>
-      </li>
-
-      <li class="flex items-center justify-between text-[28px] text-[#0b3d2e] cursor-pointer transition-all duration-300 hover:pl-[10px]">
-        <span>Global Experts and Markets</span>
-        <span class="text-[26px]">→</span>
-      </li>
-
-    </ul>
-  </div>
-
 </section>
+
 <section class="relative flex h-[90vh] bg-white font-serif overflow-visible">
 
   <!-- LEFT CONTENT -->

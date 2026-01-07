@@ -10,9 +10,11 @@
 <body class="bg-white text-gray-900 relative">
 
 <!-- LEFT FIXED VERTICAL NAME (BIG VERSION) -->
+
 <div class="hidden md:flex fixed left-0 top-0 h-screen w-24 items-center justify-center z-10">
   <span
-    class="text-green-900 font-semibold tracking-[0.35em] rotate-180"
+    id="sideText"
+    class="text-green-900 font-semibold tracking-[0.35em] rotate-180 transition-transform duration-300"
     style="
       writing-mode: vertical-rl;
       font-size: 3.5rem;
@@ -596,6 +598,23 @@
 </div>
 
 <!-- JS -->
+
+<script>
+  const sideText = document.getElementById("sideText");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    // scale calculation
+    let scale = 1 - scrollY / 1200;
+
+    // limit so zyada chota na ho
+    if (scale < 0.7) scale = 0.7;
+
+    sideText.style.transform = `rotate(180deg) scale(${scale})`;
+  });
+</script>
+
 <script>
   document.getElementById("menuBtn").onclick = () => {
     document.getElementById("mobileMenu").classList.toggle("hidden");

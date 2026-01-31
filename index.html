@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>A&O Shearman</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 </head>
 
 <body class="bg-white text-gray-900 relative">
@@ -31,58 +34,67 @@
 <div class="md:ml-16">
 
   <!-- NAVBAR -->
-  <header class="w-full border-b">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+<header id="navbar"
+  class="fixed top-0 left-0 w-full z-50 border-b bg-white transition-all duration-500">
 
-      <!-- Logo -->
-      <div class="text-2xl font-bold tracking-wide">
-        SHEARMAN
-      </div>
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-      <!-- Desktop Menu -->
-      <nav class="hidden md:flex space-x-8 text-sm font-medium">
-        <a href="#" class="hover:text-green-700">Find people</a>
-        <a href="#" class="hover:text-green-700">Capabilities</a>
-        <a href="#" class="hover:text-green-700">Insights</a>
-        <a href="#" class="hover:text-green-700">About us</a>
-        <a href="#" class="hover:text-green-700">Careers</a>
-        <a href="#" class="hover:text-green-700">Newsroom</a>
-      </nav>
-
-      <!-- Hamburger -->
-      <button id="menuBtn" class="md:hidden">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
+    <!-- Logo -->
+    <div id="logo"
+      class="text-2xl font-bold tracking-wide transition-all duration-300">
+      SHEARMAN
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden border-t px-6 py-4 space-y-4">
-      <a href="#" class="block">Find people</a>
-      <a href="#" class="block">Capabilities</a>
-      <a href="#" class="block">Insights</a>
-      <a href="#" class="block">About us</a>
-      <a href="#" class="block">Careers</a>
-      <a href="#" class="block">Newsroom</a>
-    </div>
-  </header>
+    <!-- Desktop Menu -->
+    <nav id="desktopMenu"
+      class="hidden md:flex space-x-8 text-sm font-medium transition-all duration-300">
+      <a href="#" class="hover:text-green-700">Find people</a>
+      <a href="#" class="hover:text-green-700">Capabilities</a>
+      <a href="#" class="hover:text-green-700">Insights</a>
+      <a href="#" class="hover:text-green-700">About us</a>
+      <a href="#" class="hover:text-green-700">Careers</a>
+      <a href="#" class="hover:text-green-700">Newsroom</a>
+    </nav>
 
-  <!-- HERO SECTION -->
-  <section class="max-w-7xl mx-auto px-6 py-16">
+    <!-- Hamburger -->
+    <button id="menuBtn"
+  class="opacity-0 pointer-events-none transition-all duration-300">
+  <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+    viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round"
+      d="M4 6h16M4 12h16M4 18h16"/>
+  </svg>
+</button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden border-t px-6 py-4 space-y-4 bg-white">
+    <a href="#" class="block">Find people</a>
+    <a href="#" class="block">Capabilities</a>
+    <a href="#" class="block">Insights</a>
+    <a href="#" class="block">About us</a>
+    <a href="#" class="block">Careers</a>
+    <a href="#" class="block">Newsroom</a>
+  </div>
+</header>
+
+
+ <!-- HERO WRAPPER -->
+<section class="relative h-[120vh] overflow-hidden">
+
+
+
+  <!-- HERO CONTENT -->
+  <div class="max-w-7xl mx-auto px-6 py-16 relative z-10">
     <div class="grid md:grid-cols-2 gap-12 items-center">
 
-      <!-- Left Image -->
       <img 
         src="https://www.aoshearman.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fallenoveryllp1-aoshearmanwe0db-production-ecf3%2Fmedia%2Fproject%2Faoshearman%2Faoshearman%2Finsights%2Fmisc%2Fglobal-ma-homepage.jpg%3Fh%3D1568%26iar%3D0%26w%3D1318&w=1080&q=90"
         class="w-full object-cover"
-        alt="Hero"
       />
 
-      <!-- Right Content -->
-      <div style="margin-left: 10%; margin-bottom: 10%;">
+      <div style="margin-left:10%; margin-bottom:10%;">
         <p class="uppercase text-sm tracking-widest text-green-800 mb-4">
           Global M&A Insights
         </p>
@@ -92,17 +104,69 @@
         </h1>
 
         <p class="text-gray-600 max-w-md mb-8">
-          M&A values rose sharply in H2 2025. Our latest report offers a global
-          perspective on the forces shaping M&A activity.
+          M&A values rose sharply in H2 2025.
         </p>
-
-        <a href="#" class="inline-flex items-center text-green-800 font-semibold">
-          READ MORE <span class="ml-2">→</span>
-        </a>
       </div>
 
     </div>
-  </section>
+  </div>
+    <!-- GREEN INTRO SCREEN -->
+  <div id="introScreen"
+       class="fixed top-0 left-0 w-full h-full bg-green-800 z-50
+              transition-all duration-[1400ms] ease-in-out">
+
+      <!-- ARROW -->
+      <div id="scrollArrow"
+     class="absolute right-6 bottom-10 opacity-0 transition duration-700">
+
+    <div class="text-white text-6xl mx-auto animate-bounce">↓</div>
+
+
+      </div>
+  </div>
+
+</section>
+
+
+
+<script>
+const intro = document.getElementById("introScreen");
+const arrow = document.getElementById("scrollArrow");
+
+
+// 👉 After page load → shrink to right
+window.addEventListener("load", () => {
+
+  setTimeout(() => {
+
+    intro.style.width = "70px";    // line width
+    intro.style.left = "auto";
+    intro.style.right = "0";
+
+    // show arrow
+    setTimeout(()=>{
+        arrow.style.opacity = "1";
+    },800);
+
+  }, 500);
+
+});
+
+
+// 👉 Fade out on scroll
+window.addEventListener("scroll", () => {
+
+  if(window.scrollY > 80){
+      intro.style.opacity = "0";
+
+      setTimeout(()=>{
+        intro.style.display="none";
+      },600);
+  }
+
+});
+</script>
+
 
   <section class="bg-white py-16 px-6 md:px-16">
 
@@ -619,6 +683,40 @@
   document.getElementById("menuBtn").onclick = () => {
     document.getElementById("mobileMenu").classList.toggle("hidden");
   };
+</script>
+<script>
+
+const navbar = document.getElementById("navbar");
+const logo = document.getElementById("logo");
+const desktopMenu = document.getElementById("desktopMenu");
+const menuBtn = document.getElementById("menuBtn");
+
+window.addEventListener("scroll", () => {
+
+  if(window.scrollY > 80){
+
+    navbar.classList.remove("bg-white","border-b");
+    navbar.classList.add("bg-transparent");
+
+    logo.classList.add("opacity-0");
+    desktopMenu.classList.add("opacity-0","pointer-events-none");
+
+    // hamburger show
+    menuBtn.classList.remove("opacity-0","pointer-events-none");
+
+  } else {
+
+    navbar.classList.add("bg-white","border-b");
+
+    logo.classList.remove("opacity-0");
+    desktopMenu.classList.remove("opacity-0","pointer-events-none");
+
+    // hamburger hide
+    menuBtn.classList.add("opacity-0","pointer-events-none");
+  }
+
+});
+
 </script>
 
 </body>

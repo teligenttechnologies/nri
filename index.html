@@ -7,6 +7,27 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+  .nav-link {
+    position: relative;
+    padding-top: 6px;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #15803d; /* green-700 */
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+</style>
 
 </head>
 
@@ -47,15 +68,18 @@
 
     <!-- Desktop Menu -->
     <nav id="desktopMenu"
-      class="hidden md:flex space-x-8 text-sm font-medium transition-all duration-300">
-      <a href="#" class="hover:text-green-700">HOME</a>
-      <a href="#" class="hover:text-green-700">SERVICES</a>
-      <a href="#" class="hover:text-green-700">LEGAL PRECEDENCE</a>
-      <a href="#" class="hover:text-green-700">TESTIMONIALS</a>
-      <a href="#" class="hover:text-green-700">FOUNDER'S DESK</a>
-      <a href="#" class="hover:text-green-700">ABOUT US</a>
-      <a href="#" class="hover:text-green-700">CONTACT</a>
-    </nav>
+  class="hidden md:flex space-x-8 text-sm font-medium">
+
+  <a href="#" class="nav-link hover:text-green-700">HOME</a>
+  <a href="#" class="nav-link hover:text-green-700">SERVICES</a>
+  <a href="#" class="nav-link hover:text-green-700">LEGAL PRECEDENCE</a>
+  <a href="#" class="nav-link hover:text-green-700">TESTIMONIALS</a>
+  <a href="#" class="nav-link hover:text-green-700">FOUNDER'S DESK</a>
+  <a href="#" class="nav-link hover:text-green-700">ABOUT US</a>
+  <a href="#" class="nav-link hover:text-green-700">CONTACT</a>
+
+</nav>
+
 
     <!-- Hamburger -->
     <button id="menuBtn"

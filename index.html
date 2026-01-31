@@ -7,27 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<style>
-  .nav-link {
-    position: relative;
-    padding-top: 6px;
-  }
 
-  .nav-link::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    background-color: #15803d; /* green-700 */
-    transition: width 0.3s ease;
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
-  }
-</style>
 
 </head>
 
@@ -56,7 +36,15 @@
 
   <!-- NAVBAR -->
 <header id="navbar"
-  class="fixed top-0 left-0 w-full z-50 border-b bg-white transition-all duration-500">
+  class="fixed top-0 left-0 w-full z-50 border-b bg-white transition-all duration-500 relative">
+
+  <!-- TOP HOVER LINE -->
+<div id="nav-hover-line"
+  class="absolute top-0 left-0 h-[5px] w-0 bg-green-700 z-50 pointer-events-none
+         transition-all duration-200 ease-out">
+</div>
+
+
 
   <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
@@ -67,7 +55,7 @@
     </div>
 
     <!-- Desktop Menu -->
-    <nav id="desktopMenu"
+   <nav id="desktopMenu"
   class="hidden md:flex space-x-8 text-sm font-medium">
 
   <a href="#" class="nav-link hover:text-green-700">HOME</a>
@@ -79,6 +67,7 @@
   <a href="#" class="nav-link hover:text-green-700">CONTACT</a>
 
 </nav>
+
 
 
     <!-- Hamburger -->
@@ -743,6 +732,24 @@ window.addEventListener("scroll", () => {
 
 });
 
+</script>
+<script>
+  const hoverLine = document.getElementById("nav-hover-line");
+  const links = document.querySelectorAll(".nav-link");
+
+  links.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+      const linkRect = link.getBoundingClientRect();
+      const navRect = navbar.getBoundingClientRect();
+
+      hoverLine.style.width = linkRect.width + "px";
+      hoverLine.style.left = (linkRect.left - navRect.left) + "px";
+    });
+  });
+
+  navbar.addEventListener("mouseleave", () => {
+    hoverLine.style.width = "0";
+  });
 </script>
 
 </body>

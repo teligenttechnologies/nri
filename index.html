@@ -74,33 +74,57 @@
 
         <!-- Dropdown -->
         <div id="servicesDropdown"
-          class="absolute top-full left-0 mt-4 w-48 bg-white border shadow-lg
-                 opacity-0 invisible translate-y-2
-                 transition-all duration-300">
-          <a href="law1.html" class="block">Succession Certificate</a>
-        <a href="law2.html" class="block">Banking/Finance Matters</a>
-        <a href="law3.html" class="block">Real Estate Service</a>
-        <a href="law4.html" class="block">Litigation Matters</a>
-        <a href="law5.html" class="block">Landlord Tenant Dispute</a>
-        <a href="law6.html" class="block">Family Law</a>
-        <a href="law7.html" class="block">Criminal Law</a>
-        <a href="law8.html" class="block">Partition of Property</a>
-        <a href="law9.html" class="block">Corporate Service Advisory</a>
-        <a href="law10.html" class="block">Passport matters</a>
-      </div>
+     class="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg
+            opacity-0 invisible translate-y-2
+            transition-all duration-300
+            z-50">
+
+  <a href="law1.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 rounded-t-lg transition">
+    Succession Certificate
+  </a>
+  <a href="law2.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
+    Banking/Finance Matters
+  </a>
+  <a href="law3.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
+    Real Estate Service
+  </a>
+  <a href="law4.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
+    Litigation Matters
+  </a>
+  <a href="law5.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
+    Landlord Tenant Dispute
+  </a>
+  <a href="law6.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
+    Family Law
+  </a>
+  <a href="law7.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
+    Criminal Law
+  </a>
+  <a href="law8.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
+    Partition of Property
+  </a>
+  <a href="law9.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
+    Corporate Service Advisory
+  </a>
+  <a href="law10.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 rounded-b-lg transition">
+    Passport matters
+  </a>
+</div>
+
       </div>
 
     </nav>
 
     <!-- Hamburger -->
-    <button id="menuBtn"
-      class="opacity-0 pointer-events-none transition-all duration-300">
-      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
-        viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
+<button id="menuBtn"
+  class="md:hidden block transition-all duration-300">
+  <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+    viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round"
+      d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
+
 
   </div>
 
@@ -145,6 +169,14 @@
     servicesDropdown.classList.toggle("translate-y-2");
   });
 
+  // Mobile menu toggle
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
   // Mobile services dropdown
   const mobileServicesBtn = document.getElementById("mobileServicesBtn");
   const mobileServicesMenu = document.getElementById("mobileServicesMenu");
@@ -153,6 +185,7 @@
     mobileServicesMenu.classList.toggle("hidden");
   });
 </script>
+
 
 
  <!-- HERO WRAPPER -->
@@ -178,9 +211,14 @@
           Schedule <br> A Consultation
         </h1>
 
-        <p class="text-gray-600 max-w-md mb-8">
-          button call us
-        </p>
+        <button
+  class="bg-green-800 text-white px-6 py-3 rounded-full
+         font-semibold tracking-wide
+         hover:bg-green-700 transition-all duration-300
+         active:scale-95">
+  Call Us
+</button>
+
       </div>
 
     </div>
@@ -305,7 +343,7 @@ window.addEventListener("scroll", () => {
     </div>
 
     <!-- RIGHT CONTENT -->
-    <div class="divide-y divide-green-200">
+    <div class="divide-y divide-green-200" style="margin-top: 50px;">
 
       <!-- ITEM -->
       <div class="py-10 flex justify-between gap-8">
@@ -352,7 +390,7 @@ window.addEventListener("scroll", () => {
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
     <!-- LEFT GREEN PANEL -->
-    <div class="divide-x divide-green-200">
+    <div class="divide-y divide-green-200">
 
       <!-- ITEM -->
       <div class="py-10 flex justify-between gap-8">
@@ -408,10 +446,10 @@ window.addEventListener("scroll", () => {
     </div>
 
     <!-- RIGHT CONTENT -->
-    <div class="divide-y divide-green-200">
+    <div class="divide-y divide-green-200" style="margin-left: 10px; border-top: 10px green;">
 
       <!-- ITEM -->
-      <div class="py-10 flex justify-between gap-8">
+      <div class="py-10 flex justify-between gap-8 ">
         <div>
           <h3 class="text-3xl font-serif text-green-900 mb-4">
             Criminal Law
@@ -444,6 +482,20 @@ window.addEventListener("scroll", () => {
           </h3>
           <p class="text-green-900 max-w-xl leading-relaxed">
             Handling Complexity Driving Growth.
+          </p>
+        </div>
+        <span class="text-green-900 text-2xl">→</span>
+      </div>
+
+      <!-- ITEM -->
+      <div class="py-10 flex justify-between gap-8">
+        <div>
+          <h3 class="text-3xl font-serif text-green-900 mb-4">
+            Other Query
+          </h3>
+          <p class="text-green-900 max-w-xl leading-relaxed">
+            You didn't find your relevant service?
+Contact 
           </p>
         </div>
         <span class="text-green-900 text-2xl">→</span>
@@ -882,40 +934,7 @@ window.addEventListener("scroll", () => {
     document.getElementById("mobileMenu").classList.toggle("hidden");
   };
 </script>
-<script>
 
-const navbar = document.getElementById("navbar");
-const logo = document.getElementById("logo");
-const desktopMenu = document.getElementById("desktopMenu");
-const menuBtn = document.getElementById("menuBtn");
-
-window.addEventListener("scroll", () => {
-
-  if(window.scrollY > 80){
-
-    navbar.classList.remove("bg-white","border-b");
-    navbar.classList.add("bg-transparent");
-
-    logo.classList.add("opacity-0");
-    desktopMenu.classList.add("opacity-0","pointer-events-none");
-
-    // hamburger show
-    menuBtn.classList.remove("opacity-0","pointer-events-none");
-
-  } else {
-
-    navbar.classList.add("bg-white","border-b");
-
-    logo.classList.remove("opacity-0");
-    desktopMenu.classList.remove("opacity-0","pointer-events-none");
-
-    // hamburger hide
-    menuBtn.classList.add("opacity-0","pointer-events-none");
-  }
-
-});
-
-</script>
 <script>
   const hoverLine = document.getElementById("nav-hover-line");
   const links = document.querySelectorAll(".nav-link");

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A&O Shearman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </head>
+
+  <body class="bg-white text-gray-900 relative">
+    <!-- MAIN CONTENT (LEFT SPACE GIVEN) -->
+    <div class="md:ml-16">
+      <!-- NAVBAR -->
+      <header
+        id="navbar"
+        class="fixed top-0 left-0 w-full z-50 border-b bg-white transition-all duration-500 relative"
+      >
+        <!-- TOP HOVER LINE -->
+        <div
+          id="nav-hover-line"
+          class="absolute top-0 left-0 h-[5px] w-0 bg-green-700 z-50 pointer-events-none transition-all duration-200 ease-out"
+        ></div>
+
+        <div
+          class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+        >
+          <!-- Logo -->
+          <div
+            id="logo"
+            class="text-2xl font-bold tracking-wide transition-all duration-300"
+          >
+            SHEARMAN
+          </div>
+
+          <!-- Desktop Menu -->
+    <nav id="desktopMenu"
+      class="hidden md:flex space-x-8 text-sm font-medium items-center">
+
+      <a href="index.html" class="nav-link hover:text-green-700">HOME</a>
+
+      <!-- SERVICES DROPDOWN -->
+      <div class="relative">
+        <button id="servicesBtn"
+          class="nav-link hover:text-green-700 flex items-center gap-1">
+          SERVICES
+          <svg class="w-4 h-4 mt-[2px]" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <!-- Dropdown -->
+        <div id="servicesDropdown"
+          class="absolute top-full left-0 mt-4 w-48 bg-white border shadow-lg
+                 opacity-0 invisible translate-y-2
+                 transition-all duration-300">
+          <a href="law1.html" class="block">Succession Certificate</a>
+        <a href="law2.html" class="block">Banking/Finance Matters</a>
+        <a href="law3.html" class="block">Real Estate Service</a>
+        <a href="law4.html" class="block">Litigation Matters</a>
+        <a href="law5.html" class="block">Landlord Tenant Dispute</a>
+        <a href="law6.html" class="block">Family Law</a>
+        <a href="law7.html" class="block">Criminal Law</a>
+        <a href="law8.html" class="block">Partition of Property</a>
+        <a href="law9.html" class="block">Corporate Service Advisory</a>
+        <a href="law10.html" class="block">Passport matters</a>
+      </div>
+
+      <a href="#" class="nav-link hover:text-green-700">ABOUT US</a>
+      <a href="#" class="nav-link hover:text-green-700">CONTACT</a>
+
+    </nav>
+
+    <!-- Hamburger -->
+    <button id="menuBtn"
+      class="opacity-0 pointer-events-none transition-all duration-300">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden border-t px-6 py-4 space-y-4 bg-white">
+
+    <a href="#" class="block hover:text-green-700">HOME</a>
+
+    <!-- Mobile Services -->
+    <div>
+      <button id="mobileServicesBtn"
+        class="flex justify-between w-full items-center hover:text-green-700">
+        SERVICES <span>+</span>
+      </button>
+
+      <div id="mobileServicesMenu" class="hidden pl-4 mt-3 space-y-2">
+        <a href="law1.html" class="block">Succession Certificate</a>
+        <a href="law2.html" class="block">Banking/Finance Matters</a>
+        <a href="law3.html" class="block">Real Estate Service</a>
+        <a href="law4.html" class="block">Litigation Matters</a>
+        <a href="law5.html" class="block">Landlord Tenant Dispute</a>
+        <a href="law6.html" class="block">Family Law</a>
+        <a href="law7.html" class="block">Criminal Law</a>
+        <a href="law8.html" class="block">Partition of Property</a>
+        <a href="law9.html" class="block">Corporate Service Advisory</a>
+        <a href="law10.html" class="block">Passport matters</a>
+      </div>
+          </div>
+
+          <a href="#" class="block hover:text-green-700">ABOUT US</a>
+          <a href="#" class="block hover:text-green-700">CONTACT</a>
+        </div>
+      </header>
+
+
+      
+    <!-- ---artical------ -->
+<main class="bg-white">
+
+  <article class="max-w-3xl mx-auto px-6 py-16">
+<h1 class="text-4xl md:text-6xl font-extrabold mt-4 leading-tight max-w-4xl" style="margin-bottom: 10px;">
+      Banking, financial and repatriation services for NRIs
+
+
+
+      </h1>
+     
+    <!-- INTRO -->
+<img src="https://d3npc7zk5gncpv.cloudfront.net/uploads/2020/03/Banking-matters-financial-advisory-and-repatriation-for-NRIs.jpg" />
+    <!-- POINT 2 -->
+    
+    <p class="leading-relaxed text-neutral-700 mb-10">
+     We offer our clients a complete suite of services relating to their banking, investments in equities, investments in various Government of India bonds (National Saving Certificates, Indira Vikas Patra, Kisan Vikas Patra to name a few) and savings held with Post Offices in India. With NRI’s or people of the Indian diaspora living abroad, one of the biggest headaches that has emerged over time is to handle requirements related to these funds held in banks or investments in various types of instruments illustrated above.
+
+These movable assets are typically held by NRI’s themselves or their parents and in many cases even by their grandparents. Most of these funds are held in banks or instruments that have been held for long periods of time and can be termed as legacy funds/savings. Such funds held in legacy accounts or instruments have not been kept operational and upto date. NRIs ultimately want to access these funds and use repatriation services to take these funds back to their country of residence.
+
+Coupled with the above realities, the liberalisation and rapid digitisation of the Indian economy over the last many years has led to a rapid evolution of rules and statutes governing such bank accounts/bonds/equities/savings in any other forms in India. India has now caught up with the latest best practices prevalent globally and the requirements involved in keeping such accounts/investments operational and upto date. This has resulted in these funds/investments becoming dormant or getting frozen and thereby making them inaccessible for NRI’s or the legal heirs of the original investee/account holders.
+
+Our banking, financial and repatriation services helps overcome the issues enunciated above in an end to end manner with 360-degree closure loop.</p>
+
+
+<h1 class="text-4xl md:text-6xl font-extrabold mt-4 leading-tight max-w-4xl" style="margin-bottom: 10px;">Some of the key services we offer are:</h1>
+<p>Activation of Dormant Bank Accounts.
+    <br>
+Complete assistance for clients to acquire all mandatory paperwork and ID’s without which no financial transaction can be concluded, such as PAN Card.
+<br>
+Guidance and assistance in opening of Bank Accounts as per the requirements of the client – such as NRE or NRO accounts.
+<br>
+Activation and retrieval of funds held in Accounts that are non-operational for more than 10 years, which are termed as D.E.A.F (Depositor Education & Awareness Fund) accounts and the funds are moved from the Bank to Reserve Bank of India.
+<br>
+Completion of all Know Your Customer (KYC) requirements with regards to Bank accounts/Equities/Bonds/Post Office Accounts.
+<br>
+Complete suite of repatriation services to repatriate funds held in Bank Accounts/Demat Accounts/Post Office, to the country of residence of our client with full compliance of all Government of India rules and regulations.
+</p>
+
+
+<!-- FAQ SECTION -->
+<section class="max-w-4xl mx-auto px-6 py-20">
+
+  <!-- Heading -->
+  <h2 class="text-3xl font-bold mb-10 text-center">
+    Frequently Asked Questions
+  </h2>
+
+  <!-- FAQ ITEM -->
+  <div class="space-y-4">
+
+    <!-- Question 1 -->
+    <div class="border-b">
+      <button
+        class="faq-btn w-full flex justify-between items-center py-4 text-left font-medium">
+        <span>
+Can an NRI give Power of Attorney to a resident of India to repatriate his funds? 
+</span>
+        <span class="text-xl">+</span>
+      </button>
+      <div class="faq-content hidden pb-4 text-gray-600">
+       An NRI can execute a Special Power of Attorney in favour of a local person for the said purpose.
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="border-b">
+      <button
+        class="faq-btn w-full flex justify-between items-center py-4 text-left font-medium">
+        <span>Can joint accounts be held with one or more NRIs?</span>
+        <span class="text-xl">+</span>
+      </button>
+      <div class="faq-content hidden pb-4 text-gray-600">
+      Yes.
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="border-b">
+      <button
+        class="faq-btn w-full flex justify-between items-center py-4 text-left font-medium">
+        <span>Can repatriation be done on account of a deceased person?</span>
+        <span class="text-xl">+</span>
+      </button>
+      <div class="faq-content hidden pb-4 text-gray-600">
+No, the funds cannot be transferred to the account of a deceased person.
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="border-b">
+      <button
+        class="faq-btn w-full flex justify-between items-center py-4 text-left font-medium">
+        <span>Can the funds still be repatriated if a UK resident has a National Insurance Number and not PAN Card?
+</span>
+        <span class="text-xl">+</span>
+      </button>
+      <div class="faq-content hidden pb-4 text-gray-600">
+      PAN card is compulsory for repatriation from India, even if you have a National Insurance Number.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    
+  </article>
+  </main>
+
+
+      <footer
+        class="bg-white font-serif text-[#0b3d2e] px-6 md:px-[60px] lg:px-[100px] pt-[80px] md:pt-[100px] pb-[40px]"
+      >
+        <!-- TOP GRID -->
+        <div
+          class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-[60px] gap-x-[80px]"
+        >
+          <!-- SERVICES -->
+          <div>
+            <h4
+              class="text-[14px] font-semibold tracking-[1.5px] uppercase mb-[24px]"
+            >
+              Services
+            </h4>
+            <ul class="space-y-[14px] text-[16px] md:text-[18px]">
+              <li>Partition of Property</li>
+              <li>Banking/Finance Matters</li>
+              <li>Real Estate Service</li>
+              <li>Litigation Matters</li>
+              <li>Landlord Tenant Dispute</li>
+              <li>Family Law</li>
+              <li>Corporate Service Advisory</li>
+              <li>passport matters</li>
+              <li></li>
+              <li>Criminal Law</li>
+            </ul>
+          </div>
+
+          <!-- GLOBAL COVERAGE -->
+          <div>
+            <h4
+              class="text-[14px] font-semibold tracking-[1.5px] uppercase mb-[24px]"
+            >
+              Global coverage
+            </h4>
+            <ul class="space-y-[14px] text-[16px] md:text-[18px]">
+              <li>India</li>
+              <li>Canada</li>
+            </ul>
+          </div>
+
+          <!-- FIRM -->
+          <div>
+            <h4
+              class="text-[14px] font-semibold tracking-[1.5px] uppercase mb-[24px]"
+            >
+              Firm
+            </h4>
+            <ul class="space-y-[14px] text-[16px] md:text-[18px]">
+              <li>About us</li>
+              <li>Services</li>
+              <li>Contact us</li>
+            </ul>
+          </div>
+
+          <!-- SOCIAL + LANGUAGE -->
+          <div class="lg:pl-[40px]">
+            <h4
+              class="text-[14px] font-semibold tracking-[1.5px] uppercase mb-[24px]"
+            >
+              Social
+            </h4>
+
+            <div
+              class="flex items-center gap-[12px] mb-[50px] text-[#1db954] font-semibold tracking-[1px]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 fill-current"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.345V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.602 0 4.266 2.37 4.266 5.455v6.286zM5.337 7.433a1.987 1.987 0 1 1 0-3.973 1.987 1.987 0 0 1 0 3.973zM6.992 20.452H3.68V9h3.312v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.727v20.545C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.273V1.727C24 .774 23.2 0 22.222 0z"
+                />
+              </svg>
+              LINKEDIN
+            </div>
+
+            <h4
+              class="text-[14px] font-semibold tracking-[1.5px] uppercase mb-[16px]"
+            >
+              Language preferences
+            </h4>
+
+            <p class="text-[16px] md:text-[18px]">English</p>
+          </div>
+
+          <!-- GREEN DIVIDER (DESKTOP ONLY) -->
+          <div
+            class="hidden lg:block absolute right-[25%] top-0 h-full w-[2px] bg-[#1db954]"
+          ></div>
+        </div>
+
+        <!-- BOTTOM BAR -->
+        <div
+          class="mt-[80px] md:mt-[120px] flex flex-col gap-[30px] lg:flex-row lg:justify-between lg:items-center text-[13px] md:text-[14px]"
+        >
+          <div class="flex flex-wrap gap-x-[24px] gap-y-[12px]">
+            <span>Accessibility</span>
+            <span>Cookie policy</span>
+            <span>Privacy policy</span>
+            <span>Legal notices</span>
+            <span>Modern slavery and human trafficking</span>
+            <span>Attorney advertising</span>
+          </div>
+
+          <span class="whitespace-nowrap">© 2025 A&amp;O Shearman</span>
+        </div>
+      </footer>
+
+      <script>
+        // Desktop services dropdown
+        const servicesBtn = document.getElementById("servicesBtn");
+        const servicesDropdown = document.getElementById("servicesDropdown");
+
+        servicesBtn.addEventListener("click", () => {
+          servicesDropdown.classList.toggle("opacity-0");
+          servicesDropdown.classList.toggle("invisible");
+          servicesDropdown.classList.toggle("translate-y-2");
+        });
+
+        // Mobile services dropdown
+        const mobileServicesBtn = document.getElementById("mobileServicesBtn");
+        const mobileServicesMenu =
+          document.getElementById("mobileServicesMenu");
+
+        mobileServicesBtn.addEventListener("click", () => {
+          mobileServicesMenu.classList.toggle("hidden");
+        });
+      </script>
+    </div>
+  </body>
+</html>

@@ -36,34 +36,32 @@
 
  <!-- NAVBAR -->
 <header id="navbar"
-  class="fixed top-0 left-0 w-full z-50 border-b bg-white transition-all duration-500 relative">
+  class="fixed top-0 left-0 w-full z-50 border-b bg-white transition-all duration-500">
 
   <!-- TOP HOVER LINE -->
   <div id="nav-hover-line"
-    class="absolute top-0 left-0 h-[5px] w-0 bg-green-700 z-50 pointer-events-none
+    class="absolute top-0 left-0 h-[5px] w-0 bg-green-700 pointer-events-none z-10
            transition-all duration-200 ease-out">
   </div>
 
-  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 relative z-50">
 
     <!-- Logo -->
-    <div id="logo"
-      class="text-2xl font-bold tracking-wide transition-all duration-300">
+    <div id="logo" class="text-2xl font-bold tracking-wide">
       INDIA LEGAL
     </div>
 
     <!-- Desktop Menu -->
-    <nav id="desktopMenu"
-      class="hidden md:flex space-x-8 text-sm font-medium items-center">
+    <nav class="hidden md:flex space-x-8 text-sm font-medium items-center">
 
-      <a href="index.html" class="nav-link hover:text-green-700">HOME</a>
-      <a href="#" class="nav-link hover:text-green-700">ABOUT US</a>
-      <a href="#" class="nav-link hover:text-green-700">CONTACT</a>
+      <a href="index.html" class="hover:text-green-700">HOME</a>
+      <a href="#" class="hover:text-green-700">ABOUT US</a>
+      <a href="#" class="hover:text-green-700">CONTACT</a>
 
       <!-- SERVICES DROPDOWN -->
       <div class="relative">
         <button id="servicesBtn"
-          class="nav-link hover:text-green-700 flex items-center gap-1">
+          class="hover:text-green-700 flex items-center gap-1">
           SERVICES
           <svg class="w-4 h-4 mt-[2px]" fill="none" stroke="currentColor"
             stroke-width="2" viewBox="0 0 24 24">
@@ -72,119 +70,128 @@
           </svg>
         </button>
 
-        <!-- Dropdown -->
         <div id="servicesDropdown"
-     class="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg
-            opacity-0 invisible translate-y-2
-            transition-all duration-300
-            z-50">
+          class="absolute top-full left-0 mt-2 w-56 bg-white border rounded-lg shadow-lg
+                 opacity-0 invisible translate-y-2 transition-all duration-300 z-50">
 
-  <a href="law1.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 rounded-t-lg transition">
-    Succession Certificate
-  </a>
-  <a href="law2.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
-    Banking/Finance Matters
-  </a>
-  <a href="law3.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
-    Real Estate Service
-  </a>
-  <a href="law4.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
-    Litigation Matters
-  </a>
-  <a href="law5.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
-    Landlord Tenant Dispute
-  </a>
-  <a href="law6.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
-    Family Law
-  </a>
-  <a href="law7.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
-    Criminal Law
-  </a>
-  <a href="law8.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
-    Partition of Property
-  </a>
-  <a href="law9.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 transition">
-    Corporate Service Advisory
-  </a>
-  <a href="law10.html" class="block px-4 py-2 text-gray-700 hover:bg-green-100 hover:text-green-800 rounded-b-lg transition">
-    Passport matters
-  </a>
-</div>
-
+          <a href="law1.html" class="block px-4 py-2 hover:bg-green-100">Succession Certificate</a>
+          <a href="law2.html" class="block px-4 py-2 hover:bg-green-100">Banking/Finance Matters</a>
+          <a href="law3.html" class="block px-4 py-2 hover:bg-green-100">Real Estate Service</a>
+          <a href="law4.html" class="block px-4 py-2 hover:bg-green-100">Litigation Matters</a>
+          <a href="law5.html" class="block px-4 py-2 hover:bg-green-100">Landlord Tenant Dispute</a>
+          <a href="law6.html" class="block px-4 py-2 hover:bg-green-100">Family Law</a>
+          <a href="law7.html" class="block px-4 py-2 hover:bg-green-100">Criminal Law</a>
+          <a href="law8.html" class="block px-4 py-2 hover:bg-green-100">Partition of Property</a>
+          <a href="law9.html" class="block px-4 py-2 hover:bg-green-100">Corporate Service Advisory</a>
+          <a href="law10.html" class="block px-4 py-2 hover:bg-green-100">Passport matters</a>
+        </div>
       </div>
-
     </nav>
 
     <!-- Hamburger -->
-<button id="menuBtn"
-  class="md:hidden block transition-all duration-300">
-  <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
-    viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round"
-      d="M4 6h16M4 12h16M4 18h16" />
-  </svg>
-</button>
-
-
+    <button id="menuBtn"
+      class="md:hidden z-50 relative">
+      <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden border-t px-6 py-4 space-y-4 bg-white">
+  <div id="mobileMenu"
+  class="hidden absolute top-full left-0 w-full bg-white border-t px-6 py-4 space-y-4 z-40
+         max-h-[calc(100vh-80px)] overflow-y-auto">
+
 
     <a href="index.html" class="block hover:text-green-700">HOME</a>
     <a href="#" class="block hover:text-green-700">ABOUT US</a>
     <a href="#" class="block hover:text-green-700">CONTACT</a>
 
-    <!-- Mobile Services -->
     <div>
       <button id="mobileServicesBtn"
-        class="flex justify-between w-full items-center hover:text-green-700">
+        class="flex justify-between w-full hover:text-green-700">
         SERVICES <span>+</span>
       </button>
 
-      <div id="mobileServicesMenu" class="hidden pl-4 mt-3 space-y-2">
-        <a href="law1.html" class="block">Succession Certificate</a>
-        <a href="law2.html" class="block">Banking/Finance Matters</a>
-        <a href="law3.html" class="block">Real Estate Service</a>
-        <a href="law4.html" class="block">Litigation Matters</a>
-        <a href="law5.html" class="block">Landlord Tenant Dispute</a>
-        <a href="law6.html" class="block">Family Law</a>
-        <a href="law7.html" class="block">Criminal Law</a>
-        <a href="law8.html" class="block">Partition of Property</a>
-        <a href="law9.html" class="block">Corporate Service Advisory</a>
-        <a href="law10.html" class="block">Passport matters</a>
-      </div>
-    </div>
+      <div id="mobileServicesMenu"
+  class="hidden mt-4 space-y-3 rounded-lg bg-gray-50 p-3">
 
+  <a href="law1.html"
+    class="block px-3 py-2 rounded-md border border-gray-200 bg-white text-sm hover:bg-green-50">
+    Succession Certificate
+  </a>
+
+  <a href="law2.html"
+    class="block px-3 py-2 rounded-md border border-gray-200 bg-white text-sm hover:bg-green-50">
+    Banking / Finance Matters
+  </a>
+
+  <a href="law3.html"
+    class="block px-3 py-2 rounded-md border border-gray-200 bg-white text-sm hover:bg-green-50">
+    Real Estate Service
+  </a>
+
+  <a href="law4.html"
+    class="block px-3 py-2 rounded-md border border-gray-200 bg-white text-sm hover:bg-green-50">
+    Litigation Matters
+  </a>
+
+  <a href="law5.html"
+    class="block px-3 py-2 rounded-md border border-gray-200 bg-white text-sm hover:bg-green-50">
+    Landlord Tenant Dispute
+  </a>
+
+  <a href="law6.html"
+    class="block px-3 py-2 rounded-md border border-gray-200 bg-white text-sm hover:bg-green-50">
+    Family Law
+  </a>
+
+  <a href="law7.html"
+    class="block px-3 py-2 rounded-md border border-gray-200 bg-white text-sm hover:bg-green-50">
+    Criminal Law
+  </a>
+
+  <a href="law8.html"
+    class="block px-3 py-2 rounded-md border border-gray-200 bg-white text-sm hover:bg-green-50">
+    Partition of Property
+  </a>
+
+  <a href="law9.html"
+    class="block px-3 py-2 rounded-md border border-gray-200 bg-white text-sm hover:bg-green-50">
+    Corporate Service Advisory
+  </a>
+
+  <a href="law10.html"
+    class="block px-3 py-2 rounded-md border border-gray-200 bg-white text-sm hover:bg-green-50">
+    Passport Matters
+  </a>
+</div>
+
+    </div>
   </div>
 </header>
-<script>
-  // Desktop services dropdown
-  const servicesBtn = document.getElementById("servicesBtn");
-  const servicesDropdown = document.getElementById("servicesDropdown");
 
-  servicesBtn.addEventListener("click", () => {
+<script>
+  // Desktop dropdown
+  servicesBtn.onclick = () => {
     servicesDropdown.classList.toggle("opacity-0");
     servicesDropdown.classList.toggle("invisible");
     servicesDropdown.classList.toggle("translate-y-2");
-  });
+  };
 
-  // Mobile menu toggle
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  menuBtn.addEventListener("click", () => {
+  // Mobile menu
+  menuBtn.onclick = () => {
     mobileMenu.classList.toggle("hidden");
-  });
+  };
 
-  // Mobile services dropdown
-  const mobileServicesBtn = document.getElementById("mobileServicesBtn");
-  const mobileServicesMenu = document.getElementById("mobileServicesMenu");
-
-  mobileServicesBtn.addEventListener("click", () => {
+  // Mobile services
+  mobileServicesBtn.onclick = () => {
     mobileServicesMenu.classList.toggle("hidden");
-  });
+  };
 </script>
+
 
 
 
